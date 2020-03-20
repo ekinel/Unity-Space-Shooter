@@ -15,11 +15,6 @@ public class EnemyControlls : MonoBehaviour
     private int numerator = 0;
     private int column = 0;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime);
@@ -51,9 +46,7 @@ public class EnemyControlls : MonoBehaviour
             PlayerControls playerControls = collision.GetComponent<PlayerControls>();
 
             if(playerControls != null)
-            {
                 playerControls.LifeSubstraction();
-            }
 
             Instantiate(enemyExplosionPrefab, transform.position, Quaternion.identity);
             AudioSource.PlayClipAtPoint(explossionSound, Camera.main.transform.position, 1.0f);

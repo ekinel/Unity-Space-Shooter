@@ -26,7 +26,6 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(0, 0, 0);
-
         laserShot = GetComponent<AudioSource>();
     }
 
